@@ -13,23 +13,21 @@ class CountdownApp:
         self.create_widgets()
 
     def create_widgets(self):
-        # Countdown label
+        
         tk.Label(self.root, textvariable=self.time_remaining, font=("Helvetica", 36), bg="#B98EA7").pack(pady=20, fill="both", expand=True)
 
-        # Buttons
+       
         tk.Button(self.root, text="Start", command=self.start_countdown, bg="#4caf50", fg="white").pack(side="left", padx=10)
         tk.Button(self.root, text="Pause", command=self.pause_countdown, bg="#f44336", fg="white").pack(side="left", padx=10)
         tk.Button(self.root, text="Reset", command=self.reset_countdown, bg="#2196f3", fg="white").pack(side="right", padx=10)
 
-        # Entry for adjusting time
+        
         self.time_entry = tk.Entry(self.root, font=("Helvetica", 14))
         self.time_entry.pack(side="right", padx=10)
-        self.time_entry.insert(0, "5:00")  # Initial value, format: "MM:SS"
+        self.time_entry.insert(0, "5:00") 
 
-        # Adjust time button
         tk.Button(self.root, text="Adjust Time", command=self.adjust_time, bg="#ff9800", fg="white").pack(side="right", padx=10)
 
-        # Title
         tk.Label(self.root, text="Pankaj's Countdown Watch", font=("Helvetica", 16, "bold"), bg="#B98EA7").pack(pady=10)
 
     def update_countdown(self):
@@ -70,3 +68,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
