@@ -7,7 +7,7 @@ class CountdownApp:
         self.root.title("Pankaj's Countdown Watch")
 
         self.time_remaining = tk.StringVar()
-        self.duration = timedelta(minutes=5)  # Initial duration, you can change this
+        self.duration = timedelta(minutes=5) 
         self.paused = False
 
         self.create_widgets()
@@ -26,7 +26,7 @@ class CountdownApp:
         self.time_entry.pack(side="right", padx=10)
         self.time_entry.insert(0, "5:00") 
 
-        tk.Button(self.root, text="Adjust Time", command=self.adjust_time, bg="#ff9800", fg="white").pack(side="right", padx=10)
+        tk.Button(self.root, text="Adjust Time", command=self.adjust_time, bg="#fb9f15", fg="white").pack(side="right", padx=10)
 
         tk.Label(self.root, text="Pankaj's Countdown Watch", font=("Helvetica", 16, "bold"), bg="#B98EA7").pack(pady=10)
 
